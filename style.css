@@ -8,7 +8,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background-color: darkolivegreen;
+    background-color: #1a1c19;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -17,10 +17,99 @@ body {
 }
 
 nav {
-    width: 100%;
-    height: 50px;
     position: sticky;
     border-radius: 50px;
-    border: 2px solid white;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    padding: 5px 5px;
+    background-color: #1a1c19;
 
+    justify-content: space-between;
+}
+
+nav .nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+}
+
+nav .nav-left .logo {
+    width: 400px;
+    background-color: #323025;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 13px 40px;
+    color: #e0d6c2;
+
+    font-size: 14px;
+    transition: width 0.3s ease-in-out;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    transition: width 3s ease-in-out;
+}
+
+nav ul li {
+    padding: 13px 40px;
+    border-radius: 50px;
+    border: 1px solid white;
+    color: #e0d6c2;
+
+}
+
+nav .nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 40px;
+    border-radius: 50px;
+    border: 1px solid white;
+    color: #e0d6c2;
+
+    font-size: 14px;
+}
+
+nav .nav-right span {
+    display: none;
+}
+
+
+/* media quire */
+@media screen and (max-width: 1140px) {
+    nav .nav-left .logo {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 843px) {
+    nav .nav-left ul {
+        display: none;
+    }
+
+    nav .nav-left {
+        flex: 1;
+    }
+
+    nav .nav-left .logo {
+        flex: 1;
+    }
+
+    nav .nav-right span {
+        display: block;
+    }
+
+    nav .nav-right p {
+        display: none;
+    }
 }
